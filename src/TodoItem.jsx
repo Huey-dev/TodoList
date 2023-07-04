@@ -1,5 +1,5 @@
 import React from "react"
-export function TodoItem({completed, id, title, toggleTodo, deleteTodos, todo}) {
+export function TodoItem({completed, id, title, toggleTodo, deleteTodos}) {
 
     return (
         <li> 
