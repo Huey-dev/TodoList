@@ -1,5 +1,3 @@
-npm create vite app@latest
-
 # Todo List App
 #### A simple web-based Todo List application built with React.
 ## Table of Contents
