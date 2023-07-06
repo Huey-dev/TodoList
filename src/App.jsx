@@ -64,6 +64,7 @@ const App = () => {
  
   return (
     <>
+    {/* our form should be able to add a todo */}
       <NewTodoForm onSubmit={addTodo} />
       {/* header for Todo list */}
       <h1 className="header">Todo List</h1> 
