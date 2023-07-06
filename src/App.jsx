@@ -17,8 +17,8 @@ const App = () => {
   }, [todos])
   
 
+  // add(update)todo
   function addTodo(title) {
-    // add(update)todo
     setTodos(currentTodos => {
       return [  
         ...currentTodos, 
@@ -26,6 +26,18 @@ const App = () => {
         title, 
         completed: false},
       ]
+    })
+  }
+
+  // edit todo
+  function editTodo (id, newTitle) {
+    setTodos((currentTodos) => {
+      return currentTodos.map((todo) => {
+        if (todo.id == id) {
+          return { ...todo, title: newTitle}
+        }
+        return todo
+      })
     })
   }
 
@@ -55,7 +67,11 @@ const App = () => {
       <NewTodoForm onSubmit={addTodo} />
       {/* header for Todo list */}
       <h1 className="header">Todo List</h1> 
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodos={deleteTodos}/>
+      <TodoList todos={todos} 
+        toggleTodo={toggleTodo} 
+        deleteTodos={deleteTodos} 
+        editTodo={editTodo}
+      />
     </>
   )
 }
