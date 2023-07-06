@@ -1,6 +1,6 @@
 ## Live link : https://todolistappmatt.vercel.app/
 # Todo List App
-#### A simple web-based Todo List application built with React.
+#### A simple web-based Todo List application built with React, which gives users the freedom to add, delete and edit the todos, with a checkbox for completion, with persisted data across every refresh.
 ## Table of Contents
 #### Introduction
 #### Features
@@ -25,7 +25,13 @@
 #### When a user clicks the "Delete" button next to a task, the deleteTodos function in the App component is called with the task's ID.
 #### The deleteTodos function filters out the task with the matching ID from the list of todos, effectively removing it.
 #### The TodoList component re-renders without the deleted task, and the task disappears from the screen.
-#### 4. Local storage
+#### 4. The edit Function 
+#### allows users to modify the title of a specific task  in the todo app. It provides a way to edit and
+#### update existing tasks seamlessly
+#### When a user clicks the "Edit" button next to a task, the editTodo function in the App component is called with the task's ID and the new title.
+#### The editTodo function updates the title of the task  with the matching ID in the list of todos, effectively modifying it.
+#### The TodoList component re-renders with the updated task, and the new title is displayed for that task on the screen.
+#### 5. Local storage
 #### The app utilizes the browser's local storage to persist the list of todos even after a page refresh or closure.
 #### When the App component mounts, it retrieves the stored todos from local storage (if any) and initializes the state with them.
 #### The useEffect hook is used to listen for changes in the todos state and update the local storage accordingly, ensuring that the todos are always up to date.
